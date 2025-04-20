@@ -30,13 +30,13 @@ This means that two restrictions with this tag cannot be added at the same time.
     
 Then, when you go to generate the challenge, you'll be asked three questions:
 
-Q: What game do you want to generate a challenge for?__
+Q: What game do you want to generate a challenge for? <br />
 A: Enter the name of your game.  This needs to exactly match the name of the folder that you added the Restrictions/Conflicts to.
 
-Q: What is the maximum number of restrictions that you want?__
+Q: What is the maximum number of restrictions that you want? <br />
 A: Enter the number.
 
-Q: What is the difficulty that you're aiming for?__
+Q: What is the difficulty that you're aiming for? <br />
 A: You need to enter a number.  This one's a bit trickier to answer because the difficulty of the restrictions is defined relative to each other.  You'll likely need to play around with this a bit to discover a number that seems about right before you formally decide to "go for it" and generate your real challenge.  If I ever work on this again, I'll give the person defining the restrictions a way to define numbers for "easy", "medium", and "hard" difficulties to give the player an idea of what number will fit their tastes.
 
 On top of that, there's a config YAML with some additional options:
