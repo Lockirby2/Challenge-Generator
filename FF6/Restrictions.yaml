@@ -1,0 +1,463 @@
+--- # All YAML files must have this triple-dash at the start
+- # Each list item must have a dash beforehand
+    name: "No Weapons" # The short name of the restriction
+    tags: # List out tags with dashes beforehand (used for determining which restrictions conflict with each other)
+        - "Equipment"
+    weight: 1.0 # Higher weight means that the restriction is more likely to appear; a restriction with a weight of 7.0 is 7 times as likely to show up as one with a weight of 1.0
+    difficulty: 1.0 # Difficulty of a restriction relative to the other restrictions; total difficulty of all restrictions chosen won't exceed the target difficulty
+    limiting: false # Whether this restriction limits the amount of EXP grinding that is possible
+    message: "You cannot equip weapons to any character." # Detailed description of the restriction's rules
+    
+-
+    name: "No Shields"
+    tags:
+        - "Equipment"
+    weight: 1.0
+    difficulty: 2.0
+    limiting: false
+    message: "You cannot equip shields to any character."
+
+-
+    name: "No Helmets"
+    tags:
+        - "Equipment"
+    weight: 1.0
+    difficulty: 1.0
+    limiting: false
+    message: "You cannot equip helmets to any character."
+    
+-
+    name: "No Armours"
+    tags:
+        - "Equipment"
+    weight: 1.0
+    difficulty: 2.0
+    limiting: false
+    message: "You cannot equip body armour to any character."
+    
+-
+    name: "One Relic"
+    tags:
+        - "Equipment"
+        - "Relic"
+    weight: 1.0
+    difficulty: 1.5
+    limiting: false
+    message: "You may only equip one Relic to each character."
+    
+-
+    name: "No Relics"
+    tags:
+        - "Equipment"
+        - "Relic"
+    weight: 3.0
+    difficulty: 3.0
+    limiting: false
+    message: "You cannot equip Relics to any character."
+    
+-
+    name: "No Best-In-Slot"
+    tags:
+        - "Equipment"
+    weight: 1.0
+    difficulty: 2.0
+    limiting: false
+    message: "You cannot equip the Illumina, Paladin Shield, Green Beret, Snow Muffler, Economizer, or Ribbon to any character."
+    
+-
+    name: "Slot Sharing"
+    tags:
+        - "Equipment"
+    weight: 1.0
+    difficulty: 3.0
+    limiting: false
+    message: "Each equipment slot may only be filled by a single party member. For example, if Terra is wearing a helmet, no other character in the current party may equip a helmet. Each Relic slot is counted separately.  Each character in the party must fill at least one equipment slot (unless prevented by other restrictions)."
+    
+-
+    name: "No Main Equipment"
+    tags:
+        - "Equipment"
+        - "Heavy Equipment"
+    weight: 7.0
+    difficulty: 6.0
+    limiting: false
+    message: "You cannot equip any equipment to any character (Relics are allowed)."
+    
+-
+    name: "No Equipment"
+    tags:
+        - "Equipment"
+        - "Heavy Equipment"
+    weight: 7.0
+    difficulty: 9.0
+    limiting: false
+    message: "You cannot equip any equipment to any character (including Relics)."
+    
+-
+    name: "No Evasive Equipment"
+    tags:
+        - "Equipment"
+        - "Heavy Equipment"
+    weight: 1.0
+    difficulty: 5.0
+    limiting: false
+    message: "You cannot equip any equipment with more than 10 Evade or 10 Magic Evade to any character (including Relics)."
+    
+-
+    name: "Stolen Equipment Only"
+    tags:
+        - "Equipment"
+        - "Heavy Equipment"
+    weight: 1.0
+    difficulty: 7.0
+    limiting: false
+    message: "You cannot equip any equipment unless it was stolen from an enemy."
+    
+-
+    name: "Low Level"
+    tags:
+        - "Level"
+        - "Running"
+    weight: 10.0
+    difficulty: 10.0
+    limiting: true
+    message: "You must keep characters' levels as low as possible (Standard LLG rules apply)."
+    
+-
+    name: "No Random Encounters"
+    tags:
+        - "Level"
+        - "Running"
+    weight: 3.0
+    difficulty: 10.0
+    limiting: true
+    message: "You must immediately run from all random encounters. You cannot loop on the Lete River, and cannot ride it twice. You may not open the trap door in the Burning House."
+    
+-
+    name: "0 EXP"
+    tags:
+        - "Level"
+    weight: 3.0
+    difficulty: 9.0
+    limiting: true
+    message: "You must use cheat codes or hacks to ensure that you gain no EXP."
+    
+-
+    name: "No Grinding"
+    tags:
+        - "Level"
+    weight: 1.0
+    difficulty: 2.0
+    limiting: true
+    message: "You may not grind extra levels, GP, Items, etc. Use your best judgment about what constitutes 'grinding'"
+    
+-
+    name: "No Running"
+    tags:
+        - "Running"
+    weight: 4.0
+    difficulty: 1.0
+    limiting: false
+    message: "You may not run from random encounters."
+    
+-
+    name: "Natural Magic"
+    tags:
+        - "Moves"
+        - "Magic"
+        - "Heavy Magic"
+        - "Main Command"
+    weight: 10.0
+    difficulty: 9.0
+    limiting: false
+    message: "You may not gain any spell AP from Espers or equipment."
+    
+-
+    name: "No Magic"
+    tags:
+        - "Moves"
+        - "Magic"
+        - "Heavy Magic"
+        - "Main Command"
+    weight: 10.0
+    difficulty: 9.0
+    limiting: false
+    message: "You may not cast Magic or Summon Espers. Lore/Blue Magic is allowed."
+    
+-
+    name: "Equipment Magic Only"
+    tags:
+        - "Moves"
+        - "Magic"
+        - "Heavy Magic"
+    weight: 1.0
+    difficulty: 4.0
+    limiting: false
+    message: "You may only learn Magic from equipment. Gaining spell AP from Espers is not allowed."
+    
+-
+    name: "No White Magic"
+    tags:
+        - "Moves"
+        - "Magic"
+    weight: 1.0
+    difficulty: 3.0
+    limiting: false
+    message: "You may not cast any White Magic."
+    
+-
+    name: "No Black Magic"
+    tags:
+        - "Moves"
+        - "Magic"
+    weight: 1.0
+    difficulty: 3.0
+    limiting: false
+    message: "You may not cast any Black Magic."
+    
+-
+    name: "No Grey Magic"
+    tags:
+        - "Moves"
+        - "Magic"
+    weight: 1.0
+    difficulty: 3.0
+    limiting: false
+    message: "You may not cast any Grey Magic."
+    
+-
+    name: "No Specials"
+    tags:
+        - "Moves"
+        - "Specials"
+        - "Main Command"
+        - "Need One For Sabin's Scenario"
+    weight: 8.0
+    difficulty: 7.0
+    limiting: false
+    message: "You may not use any characters' special commands. However, you may use Pummel against Vargas."
+    
+-
+    name: "No Fixed Damage"
+    tags:
+        - "Moves"
+    weight: 1.0
+    difficulty: 3.0
+    limiting: false
+    message: "You may not use any attacks unless they rely on either the Magic or Vigor stat. Dice, Flare Star, Step Mine, etc. are banned."
+    
+-
+    name: "No Boss Incapacitation"
+    tags:
+        - "Moves"
+    weight: 6.0
+    difficulty: 3.0
+    limiting: false
+    message: "You may not use any incapacitating status effects against bosses. This includes Petrify, Imp, Zombie, Sleep, Confuse, Berserk, Silence, Stop, instant death, and reviving undead bosses."
+    
+-
+    name: "No Boss Status"
+    tags:
+        - "Moves"
+    weight: 5.0
+    difficulty: 4.0
+    limiting: false
+    message: "You may not use any status effects against bosses. This includes positive status effects (e.g., Reflect), instant death, and reviving undead bosses."
+    
+-
+    name: "No Fight"
+    tags:
+        - "Moves"
+        - "Main Command"
+        - "Need One For Sabin's Scenario"
+    weight: 1.0
+    difficulty: 2.0
+    limiting: false
+    message: "You may not use Fight. However, you may use Fight to either defeat Marshal or learn Dusk Requiem with Mog during the opening sequence."
+    
+-
+    name: "No Desparation Attacks"
+    tags:
+        - "Moves"
+    weight: 1.0
+    difficulty: 1.0
+    limiting: false
+    message: "You may not use Desparation Attacks. If one is triggered by mistake, you must reset."
+    
+-
+    name: "Moves by Party Position"
+    tags:
+        - "Moves"
+        - "Main Command"
+        - "Main Command By Party Position"
+    weight: 1.0
+    difficulty: 2.0
+    limiting: false
+    message: "Each character may only use one command in battle, based on party position. The character in the top slot may only use Fight. The character in the second slot may only use their special command. The character in the third slot may only use Magic. The character in the bottom slot may only use Item."
+    
+-
+    name: "No Items"
+    tags:
+        - "Moves"
+        - "Items"
+        - "Main Command"
+    weight: 4.0
+    difficulty: 9.0
+    limiting: false
+    message: "You may not use any Items in battle or on the field."
+    
+-
+    name: "No Items in Battle"
+    tags:
+        - "Moves"
+        - "Items"
+    weight: 3.0
+    difficulty: 8.0
+    limiting: false
+    message: "You may not use any Items in battle. They may be used in the field."
+    
+-
+    name: "No Offensive Items"
+    tags:
+        - "Moves"
+        - "Items"
+    weight: 8.0
+    difficulty: 4.5
+    limiting: false
+    message: "You may not use any offensive Items."
+    
+-
+    name: "No Healing Items"
+    tags:
+        - "Moves"
+        - "Items"
+    weight: 1.0
+    difficulty: 4.5
+    limiting: false
+    message: "You may not use any healing items in battle or on the field."
+    
+-
+    name: "Solo Character"
+    tags:
+        - "Party"
+    weight: 1.0
+    difficulty: 12.0
+    limiting: false
+    message: "You may only use a single character in boss fights."
+    
+-
+    name: "Solo Rotating Character"
+    tags:
+        - "Party"
+    weight: 1.0
+    difficulty: 15.0
+    limiting: false
+    message: "You may only use a single character in boss fights. You must ensure each character is used in an equal number of boss fights."
+    
+-
+    name: "Duo Character"
+    tags:
+        - "Party"
+    weight: 4.0
+    difficulty: 6.0
+    limiting: false
+    message: "You may only use a maximum of two characters in boss fights."
+    
+-
+    name: "Trio Character"
+    tags:
+        - "Party"
+    weight: 1.0
+    difficulty: 1.0
+    limiting: false
+    message: "You may only use a maximum of three characters in boss fights."
+    
+-
+    name: "Speedrun 10h"
+    tags:
+        - "Time"
+    weight: 1.0
+    difficulty: 8.0
+    limiting: true
+    message: "You must enter the final battle with an in-game time of less than 10 hours. If you die, you must reset to avoid extra EXP gain."
+    
+-
+    name: "Speedrun 11h"
+    tags:
+        - "Time"
+    weight: 2.0
+    difficulty: 6.5
+    limiting: true
+    message: "You must enter the final battle with an in-game time of less than 11 hours. If you die, you must reset to avoid extra EXP gain."
+    
+-
+    name: "Speedrun 12h"
+    tags:
+        - "Time"
+    weight: 3.0
+    difficulty: 5.0
+    limiting: true
+    message: "You must enter the final battle with an in-game time of less than 12 hours. If you die, you must reset to avoid extra EXP gain."
+    
+-
+    name: "Speedrun 13h"
+    tags:
+        - "Time"
+    weight: 2.0
+    difficulty: 4.0
+    limiting: true
+    message: "You must enter the final battle with an in-game time of less than 13 hours. If you die, you must reset to avoid extra EXP gain."
+    
+-
+    name: "Speedrun 14h"
+    tags:
+        - "Time"
+    weight: 1.0
+    difficulty: 3.5
+    limiting: true
+    message: "You must enter the final battle with an in-game time of less than 14 hours. If you die, you must reset to avoid extra EXP gain."
+    
+-
+    name: "Step Limit 13k"
+    tags:
+        - "Steps"
+    weight: 1.0
+    difficulty: 9.0
+    limiting: true
+    message: "You must enter the final battle with fewer than 13 000 steps on the step counter. If you die, you must reset to avoid extra EXP gain. You cannot loop on the Lete River."
+    
+-
+    name: "Step Limit 13.5k"
+    tags:
+        - "Steps"
+    weight: 2.0
+    difficulty: 7.0
+    limiting: true
+    message: "You must enter the final battle with fewer than 13 500 steps on the step counter. If you die, you must reset to avoid extra EXP gain. You cannot loop on the Lete River."
+    
+-
+    name: "Step Limit 14k"
+    tags:
+        - "Steps"
+    weight: 3.0
+    difficulty: 6.0
+    limiting: true
+    message: "You must enter the final battle with fewer than 14 000 steps on the step counter. If you die, you must reset to avoid extra EXP gain. You cannot loop on the Lete River."
+    
+-
+    name: "Step Limit 14.5k"
+    tags:
+        - "Steps"
+    weight: 2.0
+    difficulty: 5.0
+    limiting: true
+    message: "You must enter the final battle with fewer than 14 500 steps on the step counter. If you die, you must reset to avoid extra EXP gain. You cannot loop on the Lete River."
+    
+-
+    name: "Step Limit 15k"
+    tags:
+        - "Steps"
+    weight: 1.0
+    difficulty: 3.5
+    limiting: true
+    message: "You must enter the final battle with fewer than 15 000 steps on the step counter. If you die, you must reset to avoid extra EXP gain. You cannot loop on the Lete River."

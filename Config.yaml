@@ -1,0 +1,6 @@
+---
+ask_for_input: true # Set to true if asking the player to specify a game, max number of restrictions, and target difficulty before starting. Otherwise, the values from this config will be used instead.
+game: FF6 # The game to generate restrictions for.
+max_restrictions: 7 # The maximum number of restrictions to generate.
+target_difficulty: 30 # The total difficulty of the game; the total difficulty of all chosen restrictions will not go over this limit.
+limiting_chance: 95.0 # The chance of adding a limiting restriction (i.e., a restriction that prevents unlimited EXP grinding); this is a percent.

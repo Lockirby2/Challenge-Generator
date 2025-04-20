@@ -1,0 +1,67 @@
+---
+# EXAMPLES:
+#
+# In this first case, any restrictions with the tag "Equipment" will conflict with any restrictions with the tag "Heavy Equipment".
+# If two restrictions conflict, they can't both be chosen at the same time
+# 
+# -
+#    first: "Equipment"
+#    second: "Heavy Equipment"
+#
+# In this second case, any restrictions with the tag "Heavy Equipment" will conflict with other restrictions with the tag "Heavy Equipment".
+# This means that two restrictions with this tag cannot be added at the same time. Obviously, restrictions don't conflict with themselves.
+#
+# -
+#    first: "Heavy Equipment"
+#    second: "Heavy Equipment"
+-
+    first: "Equipment"
+    second: "Heavy Equipment"
+-
+    first: "Relic"
+    second: "Heavy Equipment"
+-
+    first: "Heavy Equipment"
+    second: "Heavy Equipment"
+-
+    first: "Shield"
+    second: "Shield"
+-
+    first: "Relic"
+    second: "Relic"
+-
+    first: "Level"
+    second: "Level"
+-
+    first: "Running"
+    second: "Running"
+-
+    first: "Magic"
+    second: "Heavy Magic"
+-
+    first: "Heavy Magic"
+    second: "Heavy Magic"
+-
+    first: "Specials"
+    second: "Specials"
+-
+    first: "Main Command"
+    second: "Main Command By Party Position"
+-
+    first: "Items"
+    second: "Items"
+-
+    first: "Party"
+    second: "Party"
+-
+    first: "Time"
+    second: "Time"
+-
+    first: "Steps"
+    second: "Time"
+-
+    first: "Steps"
+    second: "Steps"
+-
+    first: "Need One For Sabin's Scenario"
+    second: "Need One For Sabin's Scenario"
